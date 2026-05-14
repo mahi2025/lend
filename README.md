@@ -1,6 +1,6 @@
 # micro-lending-api
 
-A fintech backedn API built using Express.js and PostgreSQL 
+A fintech backend API built using Express.js and PostgreSQL 
 Node.js for managing micro-loans. 
     
 ## Features
