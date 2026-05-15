@@ -1,9 +1,17 @@
 import express from "express";
+import { authMiddleware } from "../middleware/authMiddleware.js";
+import { adminOnly } from "../middleware/adminMiddleware.js";
 
 const router = express.Router();
 
 
-router.get("loans/request", loanRequest);
-router.get("loans/reject", loanReject);
-router.post("loans/pay", loanPay);
+router.use(authMiddleware);
+router.use(adminOnly);
+
+router.post("/request", authMiddleware, createLoan);
+
+router.post("/:id/approve", authMiddleware, adminOnly, approveLoan);
+
+router.get("/my-loans", authMiddleware, getUserLoans);
+
 
