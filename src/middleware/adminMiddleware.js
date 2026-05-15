@@ -1,8 +1,10 @@
-import jwt from "jsonwebtoken";
+import express from "express";
 
-export const adminOnly = (req, res, next) => {
+export const adminOnlyMiddleware = (req, res, next) => {
   if (req.user.role !== "admin") {
-    return res.status(403).json({ message: "Access denied" });
+    return res.status(403).json({
+      message: "Access denied",
+    });
   }
   next();
 };

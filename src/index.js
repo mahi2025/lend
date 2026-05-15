@@ -1,5 +1,5 @@
 import express from "express";
-import App from "./services/App.js";
+import App from "./App.js";
 import dotenv from "dotenv";
 import "./db/Database.js";
 
