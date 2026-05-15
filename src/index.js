@@ -1,6 +1,7 @@
 import express from "express";
 import App from "./services/App.js";
 import dotenv from "dotenv";
+import "./db/Database.js";
 
 dotenv.config();
 
