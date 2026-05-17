@@ -7,11 +7,11 @@ dotenv.config();
 
 const startServer = async () => {
   const app = express();
-  const PORT = 5000;
+  const PORT = process.env.PORT || 5000;
   App(app);
 
   app.listen(PORT, () => {
-    console.log(`app listening at http://localhost:${PORT}`);
+    console.log(`server running on ${PORT}`);
   });
 };
 

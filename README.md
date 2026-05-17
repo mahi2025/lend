@@ -2,7 +2,7 @@
 This is a fintech backend API built using Express.js provides endpoints to manage loan based on user input through REST API. 
     
 ## Features
-- store users,loan and repayment record in a database
+- store users, loans and repayment record in a database
 - Provide REST API endpoints for loan and managing users
 - Authentication and authorization 
 
@@ -16,7 +16,7 @@ This is a fintech backend API built using Express.js provides endpoints to manag
 ## Installation
 ### Prerequisites
 Make sure you have the following installed:
-- Node.js (>= 14.x)
+- Node.js (>= 20.x)
 - npm 
 - PostgreSQL
 
@@ -56,7 +56,7 @@ Make sure you have the following installed:
 - `GET /loans/my_loans` - List borrower's loan records
 - `GET /loans/all_loans` - List all loans records
 - `PATCH /loans/:loanId/status` - update loan status
-- `POST /loans/:loanId/pay` - create payments
+- `POST /loans/:loanId/pay` - create repayments request
 
 ## Project Structure
 ```
@@ -85,30 +85,9 @@ lend/
 │── README.md
 ```
 
-## Deployment
-### Deploy on Heroku
-1. Login to Heroku:
-   ```sh
-   heroku login
-   ```
-2. Create a new Heroku app:
-   ```sh
-   heroku create lend
-   ```
-3. Add environment variables to Heroku:
-   ```sh
-   heroku config:set DATABASE_URL=your_database_connection_string
-   heroku config:set OPENAI_API_KEY=your_openai_api_key
-   heroku config:set JWT_SECRET=your_jwt_secret
-   ```
-4. Deploy to Heroku:
-   ```sh
-   git push heroku main
-   ```
-
 ## Contributing
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature-name`)
+2. Cre a feature branch (`git checkout -b feature-name`)
 3. Commit changes (`git commit -m 'Add feature'`)
 4. Push to the branch (`git push origin feature-name`)
 5. Open a pull request
